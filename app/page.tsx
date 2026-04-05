@@ -1,4 +1,21 @@
+'use client';
+import { useState } from 'react';
+
 export default function Home() {
+  const [submitted, setSubmitted] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    await fetch('https://formspree.io/f/xqeggjab', {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+    setSubmitted(true);
+  }
+
   return (
     <>
       <style>{`
@@ -85,6 +102,12 @@ export default function Home() {
           padding: 12px 0;
         }
         .send:hover { color: #0d0d0b; }
+        .thankyou {
+          font-size: 13px;
+          color: #aaa;
+          letter-spacing: 0.1em;
+          padding: 12px 0;
+        }
         .footer {
           font-size: 10px;
           color: #ccc;
@@ -113,11 +136,16 @@ export default function Home() {
         </div>
 
         <div className="bottom">
-          <form action="https://formspree.io/f/xqeggjab" method="POST" style={{maxWidth:'420px', width:'100%', padding:'0 24px'}}>
-            <input type="hidden" name="_next" value="https://niccoli.ai" />
-            <input type="email" name="email" placeholder="your email" required className="field" />
-            <textarea name="submission" placeholder="the idea, paper, or research" rows={3} required className="field" />
-            <button type="submit" className="send">Send</button>
+          <form onSubmit={handleSubmit} style={{maxWidth:'420px', width:'100%', padding:'0 24px'}}>
+            {!submitted ? (
+              <>
+                <input type="email" name="email" placeholder="your email" required className="field" />
+                <textarea name="submission" placeholder="the idea, paper, or research" rows={3} required className="field" />
+                <button type="submit" className="send">Send</button>
+              </>
+            ) : (
+              <div className="thankyou">received.</div>
+            )}
           </form>
           <div className="footer">© 2026 niccoli.ai</div>
         </div>
