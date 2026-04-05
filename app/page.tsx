@@ -15,11 +15,11 @@ export default function Home() {
           font-weight: 400;
         }
         .logo {
-          padding-top: 12vh;
+          padding-top: 18vh;
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 20px;
+          gap: 28px;
         }
         .wordmark {
           display: flex;
@@ -29,7 +29,7 @@ export default function Home() {
         .niccoli {
           font-family: 'Cormorant Garamond', Georgia, serif;
           font-weight: 400;
-          font-size: 52px;
+          font-size: 72px;
           letter-spacing: 0.1em;
           color: #0d0d0b;
           line-height: 1;
@@ -37,7 +37,7 @@ export default function Home() {
         .research {
           font-family: 'Cormorant Garamond', Georgia, serif;
           font-weight: 400;
-          font-size: 22px;
+          font-size: 30px;
           letter-spacing: 0.18em;
           color: #aaa;
           line-height: 1;
@@ -51,7 +51,7 @@ export default function Home() {
         }
         form {
           width: 100%;
-          max-width: 420px;
+          max-width: 680px;
           display: flex;
           flex-direction: column;
         }
@@ -96,8 +96,8 @@ export default function Home() {
 
       <div className="page">
         <div className="logo">
-          <svg width="58" height="62" viewBox="0 0 58 62" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 60 L7 34 Q7 4 29 4 Q51 4 51 34 L51 60" fill="none" stroke="#0d0d0b" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="80" height="86" viewBox="0 0 80 86" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 84 L10 42 Q10 6 40 6 Q70 6 70 42 L70 84" fill="none" stroke="#0d0d0b" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <div className="wordmark">
             <div className="niccoli">NICCOLI</div>
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
 
         <div className="bottom">
-          <form action="https://formspree.io/f/xqeggjab" method="POST" style={{maxWidth:'420px', width:'100%', padding:'0 24px'}}>
+          <form action="https://formspree.io/f/xqeggjab" method="POST" style={{maxWidth:'680px', width:'100%', padding:'0 48px'}}>
             <input type="email" name="email" placeholder="your email" required className="field" />
             <textarea name="submission" placeholder="the idea, paper, or research" rows={3} required className="field" />
             <button type="submit" className="send">Send</button>
