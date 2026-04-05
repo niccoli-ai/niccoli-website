@@ -3,7 +3,11 @@ export default function Home() {
     <main className="min-h-screen bg-white flex flex-col items-center">
 
       <section className="w-full flex justify-center pt-20 pb-16">
-        <img src="/niccoli_logo.svg" alt="Niccoli" className="w-[600px]" />
+        <svg width="260" height="40" viewBox="0 0 260 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 38 L3 18 Q3 2 13 2 Q23 2 23 18 L23 38" fill="none" stroke="#0d0d0b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+          <text x="38" y="28" fontFamily="Georgia, serif" fontSize="22" letterSpacing="6" fill="#0d0d0b">NICCOLI</text>
+          <text x="40" y="38" fontFamily="Georgia, serif" fontSize="8" letterSpacing="6" fill="#888">RESEARCH</text>
+        </svg>
       </section>
 
       <div className="w-full border-t border-black/10" />
