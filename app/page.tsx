@@ -16,6 +16,8 @@ export default function Home() {
         }
         .logo {
           padding-top: 18vh;
+          padding-left: 16px;
+          padding-right: 16px;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -51,7 +53,7 @@ export default function Home() {
         }
         form {
           width: 100%;
-          max-width: 680px;
+          max-width: 420px;
           display: flex;
           flex-direction: column;
         }
@@ -92,11 +94,16 @@ export default function Home() {
           font-family: 'Cormorant Garamond', Georgia, serif;
           font-weight: 400;
         }
+        @media (max-width: 600px) {
+          .niccoli { font-size: 42px; }
+          .research { font-size: 18px; }
+          .logo { gap: 16px; padding-top: 14vh; }
+        }
       `}</style>
 
       <div className="page">
         <div className="logo">
-          <svg width="80" height="86" viewBox="0 0 80 86" xmlns="http://www.w3.org/2000/svg">
+          <svg width="80" height="86" viewBox="0 0 80 86" xmlns="http://www.w3.org/2000/svg" style={{flexShrink:0}}>
             <path d="M10 84 L10 42 Q10 6 40 6 Q70 6 70 42 L70 84" fill="none" stroke="#0d0d0b" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <div className="wordmark">
@@ -106,7 +113,7 @@ export default function Home() {
         </div>
 
         <div className="bottom">
-          <form action="https://formspree.io/f/xqeggjab" method="POST" style={{maxWidth:'680px', width:'100%', padding:'0 48px'}}>
+          <form action="https://formspree.io/f/xqeggjab" method="POST" style={{maxWidth:'420px', width:'100%', padding:'0 24px'}}>
             <input type="email" name="email" placeholder="your email" required className="field" />
             <textarea name="submission" placeholder="the idea, paper, or research" rows={3} required className="field" />
             <button type="submit" className="send">Send</button>
