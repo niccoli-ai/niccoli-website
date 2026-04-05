@@ -95,9 +95,9 @@ export default function Home() {
           font-weight: 400;
         }
         @media (max-width: 600px) {
-          .niccoli { font-size: 42px; }
-          .research { font-size: 18px; }
-          .logo { gap: 16px; padding-top: 14vh; }
+          .niccoli { font-size: 52px; }
+          .research { font-size: 22px; }
+          .logo { gap: 18px; padding-top: 14vh; }
         }
       `}</style>
 
