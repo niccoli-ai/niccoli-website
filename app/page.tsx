@@ -140,7 +140,7 @@ export default function Home() {
             {!submitted ? (
               <>
                 <input type="email" name="email" placeholder="your email" required className="field" />
-                <textarea name="submission" placeholder="the idea, paper, or research" rows={3} required className="field" />
+                <textarea name="submission" placeholder="an idea that changed how you see the world" rows={3} required className="field" />
                 <button type="submit" className="send">Send</button>
               </>
             ) : (
