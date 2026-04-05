@@ -17,27 +17,26 @@ export default function Home() {
         .logo {
           padding-top: 12vh;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           align-items: center;
           gap: 16px;
         }
         .wordmark {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          gap: 6px;
+          gap: 3px;
         }
         .niccoli {
-          font-size: 48px;
+          font-size: 28px;
           font-weight: 300;
-          letter-spacing: 0.25em;
+          letter-spacing: 0.22em;
           color: #0d0d0b;
           line-height: 1;
         }
         .research {
-          font-size: 11px;
+          font-size: 10px;
           font-weight: 300;
-          letter-spacing: 0.4em;
+          letter-spacing: 0.38em;
           color: #999;
           line-height: 1;
         }
@@ -95,8 +94,8 @@ export default function Home() {
 
       <div className="page">
         <div className="logo">
-          <svg width="60" height="90" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 88 L8 44 Q8 4 30 4 Q52 4 52 44 L52 88" fill="none" stroke="#0d0d0b" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="22" height="34" viewBox="0 0 22 34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 32 L3 15 Q3 2 11 2 Q19 2 19 15 L19 32" fill="none" stroke="#0d0d0b" strokeWidth="1" strokeLinecap="round"/>
           </svg>
           <div className="wordmark">
             <div className="niccoli">NICCOLI</div>
