@@ -47,7 +47,6 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding-bottom: 0;
         }
         form {
           width: 100%;
@@ -96,8 +95,8 @@ export default function Home() {
 
       <div className="page">
         <div className="logo">
-          <svg width="100" height="90" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 90 L20 45 Q20 8 50 8 Q80 8 80 45 L80 90" fill="none" stroke="#0d0d0b" strokeWidth="1.5" strokeLinecap="round"/>
+          <svg width="60" height="90" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 88 L8 44 Q8 4 30 4 Q52 4 52 44 L52 88" fill="none" stroke="#0d0d0b" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <div className="wordmark">
             <div className="niccoli">NICCOLI</div>
