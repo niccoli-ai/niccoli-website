@@ -114,6 +114,7 @@ export default function Home() {
 
         <div className="bottom">
           <form action="https://formspree.io/f/xqeggjab" method="POST" style={{maxWidth:'420px', width:'100%', padding:'0 24px'}}>
+            <input type="hidden" name="_next" value="https://niccoli.ai" />
             <input type="email" name="email" placeholder="your email" required className="field" />
             <textarea name="submission" placeholder="the idea, paper, or research" rows={3} required className="field" />
             <button type="submit" className="send">Send</button>
