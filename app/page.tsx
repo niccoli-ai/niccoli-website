@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-white flex items-center justify-center">
-      <img src="/niccoli_palle_logo.svg" alt="Niccoli" className="w-96" />
+      <img src="/niccoli_palle_logo.svg" alt="Niccoli" className="w-[500px]" />
     </main>
   );
 }

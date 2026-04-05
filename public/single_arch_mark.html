@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Arch — Niccoli</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; font-family: Georgia, serif; }
+  body.dark { background: #0d0d0b; }
+  .stage { display: flex; align-items: center; justify-content: center; padding: 80px 60px; }
+  .tog-row { position: fixed; top: 20px; right: 24px; display: flex; align-items: center; gap: 8px; font-size: 11px; color: #888; letter-spacing: 0.08em; text-transform: uppercase; }
+  body.dark .tog-row { color: #444; }
+  .tog { width: 28px; height: 16px; background: #ccc; border-radius: 8px; position: relative; cursor: pointer; display: inline-block; transition: background 0.2s; }
+  .tog.on { background: #e8e4db; }
+  .tog-knob { position: absolute; top: 2px; left: 2px; width: 12px; height: 12px; background: #fff; border-radius: 50%; transition: transform 0.2s; }
+  .tog.on .tog-knob { background: #0d0d0b; transform: translateX(12px); }
+  path { stroke: #0d0d0b; transition: stroke 0.2s; }
+  body.dark path { stroke: #e8e4db; }
+</style>
+</head>
+<body id="body">
+  <div class="tog-row">
+    Dark
+    <div class="tog" id="tog" onclick="toggleDark()"><div class="tog-knob"></div></div>
+  </div>
+  <div class="stage">
+    <svg width="200" height="200" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 130 L20 70 Q20 10 70 10 Q120 10 120 70 L120 130" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+<script>
+let dark = false;
+function toggleDark() {
+  dark = !dark;
+  document.getElementById('tog').classList.toggle('on', dark);
+  document.getElementById('body').classList.toggle('dark', dark);
+}
+</script>
+</body>
+</html>
