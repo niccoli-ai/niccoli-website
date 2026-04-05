@@ -3,105 +3,116 @@ export default function Home() {
     <>
       <style>{`
         @import url('https://unpkg.com/@fontsource/cormorant-garamond/300.css');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: #fff; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; background: #fff; }
         .page {
           min-height: 100vh;
           background: #fff;
           display: flex;
           flex-direction: column;
-          padding: 48px 64px;
+          align-items: center;
           font-family: 'Cormorant Garamond', Georgia, serif;
           font-weight: 300;
         }
         .logo {
-          font-size: 13px;
-          letter-spacing: 0.2em;
-          color: #0d0d0b;
-          text-transform: uppercase;
+          padding-top: 12vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
         }
-        .form-area {
-          margin-top: auto;
-          padding-top: 120px;
-          max-width: 560px;
+        .wordmark {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
         }
-        .question {
-          font-size: 16px;
+        .niccoli {
+          font-size: 48px;
           font-weight: 300;
+          letter-spacing: 0.25em;
           color: #0d0d0b;
-          line-height: 1.6;
-          margin-bottom: 48px;
-          letter-spacing: 0.02em;
+          line-height: 1;
+        }
+        .research {
+          font-size: 11px;
+          font-weight: 300;
+          letter-spacing: 0.4em;
+          color: #999;
+          line-height: 1;
+        }
+        .bottom {
+          margin-top: auto;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 0;
+        }
+        form {
+          width: 100%;
+          max-width: 420px;
+          display: flex;
+          flex-direction: column;
         }
         .field {
           width: 100%;
           border: none;
-          border-bottom: 1px solid #0d0d0b;
+          border-bottom: 0.5px solid #e0e0e0;
           outline: none;
+          background: transparent;
           font-family: 'Cormorant Garamond', Georgia, serif;
           font-weight: 300;
           font-size: 15px;
           color: #0d0d0b;
-          background: transparent;
-          padding: 8px 0;
-          margin-bottom: 32px;
-          display: block;
+          padding: 12px 0;
+          border-radius: 0;
         }
-        .field::placeholder { color: #aaa; }
-        textarea.field { resize: none; min-height: 140px; }
-        .submit-btn {
+        .field::placeholder { color: #ccc; }
+        textarea.field { resize: none; }
+        .send {
           background: none;
           border: none;
-          border-bottom: 1px solid #0d0d0b;
           font-family: 'Cormorant Garamond', Georgia, serif;
           font-weight: 300;
-          font-size: 15px;
-          color: #0d0d0b;
-          padding: 4px 0;
+          font-size: 13px;
+          letter-spacing: 0.2em;
+          color: #999;
           cursor: pointer;
-          letter-spacing: 0.05em;
+          text-align: left;
+          padding: 12px 0;
         }
+        .send:hover { color: #0d0d0b; }
         .footer {
-          margin-top: 80px;
           font-size: 10px;
-          color: #bbb;
-          letter-spacing: 0.05em;
+          color: #ccc;
+          text-align: center;
+          margin-bottom: 16px;
+          margin-top: 8px;
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-weight: 300;
         }
       `}</style>
 
       <div className="page">
-        <div className="logo">Niccoli</div>
-
-        <div className="form-area">
-          <p className="question">
-            What is the one idea, paper, or research that changed how you see the world?
-          </p>
-
-          <form action="https://formspree.io/f/xqeggjab" method="POST">
-            <input
-              type="hidden"
-              name="_replyto"
-              value=""
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="your email"
-              required
-              className="field"
-            />
-            <textarea
-              name="submission"
-              placeholder="your answer"
-              rows={6}
-              required
-              className="field"
-            />
-            <button type="submit" className="submit-btn">Submit</button>
-          </form>
+        <div className="logo">
+          <svg width="100" height="90" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 90 L20 45 Q20 8 50 8 Q80 8 80 45 L80 90" fill="none" stroke="#0d0d0b" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+          <div className="wordmark">
+            <div className="niccoli">NICCOLI</div>
+            <div className="research">RESEARCH</div>
+          </div>
         </div>
 
-        <div className="footer">© 2026 niccoli.ai</div>
+        <div className="bottom">
+          <form action="https://formspree.io/f/xqeggjab" method="POST" style={{maxWidth:'420px', width:'100%', padding:'0 24px'}}>
+            <input type="email" name="email" placeholder="your email" required className="field" />
+            <textarea name="submission" placeholder="the idea, paper, or research" rows={3} required className="field" />
+            <button type="submit" className="send">Send</button>
+          </form>
+          <div className="footer">© 2026 niccoli.ai</div>
+        </div>
       </div>
     </>
   );
