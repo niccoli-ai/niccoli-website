@@ -147,7 +147,7 @@ export default function Home() {
               <div className="thankyou">received.</div>
             )}
           </form>
-          <div className="footer">© 2026 niccoli.ai</div>
+          <div className="footer">© 2026 niccoli.uk</div>
         </div>
       </div>
     </>
